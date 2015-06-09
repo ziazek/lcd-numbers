@@ -19,5 +19,9 @@ Ruby 2.2.2
     $ lcd.rb 012345
     $ lcd.rb -s 1 6789
 
-## Learning points
+## Observations
+
+- Corners are always 1 character and blank.
+- Mid-points are always 1 character and blank.
+- Each digit is made up of top, top-left, top-right, middle, bottom-left, bottom-right, bottom.
 

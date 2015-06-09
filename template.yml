@@ -1,0 +1,80 @@
+0:
+  top: on
+  top-left: on
+  top-right: on
+  middle: off
+  bottom-left: on
+  bottom-right: on
+  bottom: on
+1: 
+  top: off
+  top-left: off
+  top-right: on
+  middle: off
+  bottom-left: off
+  bottom-right: on
+  bottom: off
+2: 
+  top: on
+  top-left: off
+  top-right: on
+  middle: on
+  bottom-left: on
+  bottom-right: off
+  bottom: on
+3: 
+  top: on
+  top-left: off
+  top-right: on
+  middle: on
+  bottom-left: off
+  bottom-right: on
+  bottom: on
+4: 
+  top: off
+  top-left: on
+  top-right: on
+  middle: on
+  bottom-left: off
+  bottom-right: on
+  bottom: off
+5: 
+  top: on
+  top-left: on
+  top-right: off
+  middle: on
+  bottom-left: off
+  bottom-right: on
+  bottom: on
+6: 
+  top: on
+  top-left: on
+  top-right: off
+  middle: on
+  bottom-left: on
+  bottom-right: on
+  bottom: on
+7: 
+  top: on
+  top-left: off
+  top-right: on
+  middle: off
+  bottom-left: off
+  bottom-right: on
+  bottom: off
+8: 
+  top: on
+  top-left: on
+  top-right: on
+  middle: on
+  bottom-left: on
+  bottom-right: on
+  bottom: on
+9: 
+  top: on
+  top-left: on
+  top-right: on
+  middle: on
+  bottom-left: off
+  bottom-right: on
+  bottom: on
