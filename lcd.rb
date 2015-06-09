@@ -1,7 +1,6 @@
 #!/usr/bin/env ruby
 
 require 'yaml'
-require 'pp'
 require 'optparse'
 
 class LCD
