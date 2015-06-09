@@ -19,6 +19,8 @@ class LCD
     puts horizontal("bottom")
   end
 
+  private
+
   def horizontal(position)
     result = ""
     digits.each_char do |d|
@@ -42,8 +44,6 @@ class LCD
     end
     result
   end
-
-  private
 
   attr_accessor :template, :size, :digits
 end
