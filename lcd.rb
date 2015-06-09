@@ -13,67 +13,33 @@ class LCD
   end
 
   def display
-    puts row_1
-    puts row_2
-    puts row_3
-    puts row_4
-    puts row_5
+    puts horizontal("top")
+    puts vertical("top")
+    puts horizontal("middle")
+    puts vertical("bottom")
+    puts horizontal("bottom")
   end
 
-  def row_1
+  def horizontal(position)
     result = ""
     digits.each_char do |d|
-      bar = template.fetch(d.to_i).fetch("top") ? "-" : " "
+      bar = template.fetch(d.to_i).fetch("#{position}") ? "-" : " "
       digit_bars = " " + (bar * size) + " "
       result += digit_bars + " "
     end
     result
   end
 
-  def row_2
+  def vertical(position)
     result = ""
     size.times do
       digits.each_char do |d|
-        bar_left = template.fetch(d.to_i).fetch("top-left") ? "|" : " "
-        bar_right = template.fetch(d.to_i).fetch("top-right") ? "|" : " "
+        bar_left = template.fetch(d.to_i).fetch("#{position}-left") ? "|" : " "
+        bar_right = template.fetch(d.to_i).fetch("#{position}-right") ? "|" : " "
         digit_bars = bar_left + (" " * size) + bar_right
         result += digit_bars + " "
       end
       result += "\n"
-    end
-    result
-  end
-
-  def row_3
-    result = ""
-    digits.each_char do |d|
-      bar = template.fetch(d.to_i).fetch("middle") ? "-" : " "
-      digit_bars = " " + (bar * size) + " "
-      result += digit_bars + " "
-    end
-    result
-  end
-
-  def row_4
-    result = ""
-    size.times do
-      digits.each_char do |d|
-        bar_left = template.fetch(d.to_i).fetch("bottom-left") ? "|" : " "
-        bar_right = template.fetch(d.to_i).fetch("bottom-right") ? "|" : " "
-        digit_bars = bar_left + (" " * size) + bar_right
-        result += digit_bars + " "
-      end
-      result += "\n"
-    end
-    result
-  end
-
-  def row_5
-    result = ""
-    digits.each_char do |d|
-      bar = template.fetch(d.to_i).fetch("bottom") ? "-" : " "
-      digit_bars = " " + (bar * size) + " "
-      result += digit_bars + " "
     end
     result
   end
@@ -97,6 +63,8 @@ end
 
 # ensure there is an argument and there is at least one digit
 exit unless (ARGV.size == 1 && ARGV[0].gsub(/\D/, "").size > 0)
+
+puts "Stripping away non-digit characters..." if ARGV[0] =~ /\D/
 
 lcd = LCD.new(size: args.size, digits: ARGV[0].gsub(/\D/, ""))
 lcd.display
