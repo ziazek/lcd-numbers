@@ -25,3 +25,7 @@ Ruby 2.2.2
 - Mid-points are always 1 character and blank.
 - Each digit is made up of top, top-left, top-right, middle, bottom-left, bottom-right, bottom.
 
+## License
+
+This code is released under the [MIT License](http://www.opensource.org/licenses/MIT)
+
